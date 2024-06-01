@@ -60,8 +60,8 @@ window managers, on Arch Linux, Void Linux, Debian and Fedora.
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}-*.egg-info/
 %{_bindir}/%{name}
-%{_datadir}/%{name}/
-%{_datadir}/pixmaps/*
-%{_datadir}/applications/*
+#{_datadir}/%{name}/
+#{_datadir}/pixmaps/*
+#{_datadir}/applications/*
 %doc README.md
 %license LICENSE LICENSE-COLORTHIEF
