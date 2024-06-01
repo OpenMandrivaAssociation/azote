@@ -51,6 +51,6 @@ install -D -m 0644 dist/azote.desktop %{buildroot}%{_datadir}/applications/azote
 %{python_sitelib}/%{name}-*.egg-info/
 %{_bindir}/%{name}
 %{_datadir}/azote/azote.svg
-%{_datadir}/pplications/azote.desktop
+%{_datadir}/applications/azote.desktop
 %doc README.md
 %license LICENSE LICENSE-COLORTHIEF
