@@ -43,6 +43,8 @@ window managers, on Arch Linux, Void Linux, Debian and Fedora.
 
 %install
 %py_install
+install -D -m 0644 dist/azote.svg %{buildroot}%{_datadir}/azote/azote.svg
+install -D -m 0644 dist/azote.desktop %{buildroot}%{_datadir}/applications/azote.desktop
 # not sure why setup.py doesn't do this, but:
 #install -p -D dist/%{name} %{buildroot}/%{_bindir}/%{name}
 #desktop-file-edit --set-icon %{_datadir}/pixmaps/%{name}.svg dist/%{name}.desktop
