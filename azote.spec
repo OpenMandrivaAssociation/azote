@@ -44,17 +44,17 @@ window managers, on Arch Linux, Void Linux, Debian and Fedora.
 %install
 %py_install
 # not sure why setup.py doesn't do this, but:
-install -p -D dist/%{name} %{buildroot}/%{_bindir}/%{name}
+#install -p -D dist/%{name} %{buildroot}/%{_bindir}/%{name}
 #desktop-file-edit --set-icon %{_datadir}/pixmaps/%{name}.svg dist/%{name}.desktop
-install -p -D -m 0644 -t %{buildroot}/%{_datadir}/applications dist/%{name}.desktop
-install -p -D -m 0644 -t %{buildroot}/%{_datadir}/%{name} dist/*.png dist/*.svg
-install -p -D -m 0644 -t %{buildroot}/%{_datadir}/pixmaps dist/azote.svg
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
-for lib in %{buildroot}%{python3_sitelib}/%{name}/*.py; do
- sed '1{\@^#!/usr/bin/env python@d}' $lib > $lib.new &&
- touch -r $lib $lib.new &&
- mv $lib.new $lib
-done
+#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/applications dist/%{name}.desktop
+#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/%{name} dist/*.png dist/*.svg
+#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/pixmaps dist/azote.svg
+#desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+#for lib in %{buildroot}%{python3_sitelib}/%{name}/*.py; do
+# sed '1{\@^#!/usr/bin/env python@d}' $lib > $lib.new &&
+# touch -r $lib $lib.new &&
+# mv $lib.new $lib
+#done
 
 %files
 %{python_sitelib}/%{name}/
