@@ -45,25 +45,12 @@ window managers, on Arch Linux, Void Linux, Debian and Fedora.
 %py_install
 install -D -m 0644 dist/azote.svg %{buildroot}%{_datadir}/azote/azote.svg
 install -D -m 0644 dist/azote.desktop %{buildroot}%{_datadir}/applications/azote.desktop
-# not sure why setup.py doesn't do this, but:
-#install -p -D dist/%{name} %{buildroot}/%{_bindir}/%{name}
-#desktop-file-edit --set-icon %{_datadir}/pixmaps/%{name}.svg dist/%{name}.desktop
-#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/applications dist/%{name}.desktop
-#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/%{name} dist/*.png dist/*.svg
-#install -p -D -m 0644 -t %{buildroot}/%{_datadir}/pixmaps dist/azote.svg
-#desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
-#for lib in %{buildroot}%{python3_sitelib}/%{name}/*.py; do
-# sed '1{\@^#!/usr/bin/env python@d}' $lib > $lib.new &&
-# touch -r $lib $lib.new &&
-# mv $lib.new $lib
-#done
 
 %files
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}-*.egg-info/
 %{_bindir}/%{name}
-#{_datadir}/%{name}/
-#{_datadir}/pixmaps/*
-#{_datadir}/applications/*
+%{_datadir}/azote/azote.svg
+%{_datadir}/pplications/azote.desktop
 %doc README.md
 %license LICENSE LICENSE-COLORTHIEF
