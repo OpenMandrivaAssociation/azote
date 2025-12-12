@@ -1,6 +1,6 @@
 Name:      azote
 Version:   1.16.0
-Release:   1
+Release:   2
 BuildArch: noarch
 Summary:   Wallpaper and color manager for Sway, i3 and some other WMs
 Group:     WM/NWG
