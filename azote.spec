@@ -1,6 +1,6 @@
 Name:      azote
 Version:   1.16.0
-Release:   2
+Release:   3
 BuildArch: noarch
 Summary:   Wallpaper and color manager for Sway, i3 and some other WMs
 Group:     WM/NWG
@@ -10,9 +10,8 @@ License:   GPL-3.0-only and BSD-1-Clause
 URL:       https://github.com/nwg-piotr/azote
 Source0:   https://github.com/nwg-piotr/azote/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: python
-BuildRequires: python-setuptools
-BuildRequires: pkgconfig(python)
+BuildRequires: pkgconfig(python3)
+BuildRequires: python%{pyver}dist(setuptools)
 
 Requires: python-pillow
 Requires: python-gobject3
@@ -48,7 +47,7 @@ install -D -m 0644 dist/azote.desktop %{buildroot}%{_datadir}/applications/azote
 
 %files
 %{python_sitelib}/%{name}/
-%{python_sitelib}/%{name}-*.egg-info/
+%{python_sitelib}/%{name}-*.*info/
 %{_bindir}/%{name}
 %{_datadir}/azote/azote.svg
 %{_datadir}/applications/azote.desktop
